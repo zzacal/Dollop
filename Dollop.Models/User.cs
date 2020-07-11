@@ -12,6 +12,9 @@ namespace Dollop.Models
         public string DisplayName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Age { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public List<Media> Media { get; set; }
+        public List<Album> Albums { get; set; }
     }
 }
