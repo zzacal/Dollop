@@ -17,5 +17,7 @@ namespace Dollop.Api.Data
         public DbSet<Dollop.Models.User> User { get; set; }
 
         public DbSet<Dollop.Models.Media> Media { get; set; }
+
+        public DbSet<Dollop.Models.Album> Album { get; set; }
     }
 }
