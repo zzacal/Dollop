@@ -14,7 +14,7 @@ namespace Dollop.Models
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime CreatedDate { get; set; }
-        public List<Media> Media { get; set; }
+        public List<MediaItem> Media { get; set; }
         public List<Album> Albums { get; set; }
     }
 }

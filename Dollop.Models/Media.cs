@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Dollop.Models
 {
-    public class Media
+    public class MediaItem
     {
         public Guid Id { get; set; }
-        public Album Album { get; set; }
+        public List<MediaAlbum> MediaAlbums { get; set; }
         public User User { get; set; }
         public string Url { get; set; }
         public string Name { get; set; }

@@ -23,14 +23,14 @@ namespace Dollop.Api.Controllers
 
         // GET: api/Media
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Media>>> GetMedia()
+        public async Task<ActionResult<IEnumerable<MediaItem>>> GetMedia()
         {
             return await _context.Media.ToListAsync();
         }
 
         // GET: api/Media/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Media>> GetMedia(Guid id)
+        public async Task<ActionResult<MediaItem>> GetMedia(Guid id)
         {
             var media = await _context.Media.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace Dollop.Api.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMedia(Guid id, Media media)
+        public async Task<IActionResult> PutMedia(Guid id, MediaItem media)
         {
             if (id != media.Id)
             {
@@ -78,7 +78,7 @@ namespace Dollop.Api.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Media>> PostMedia(Media media)
+        public async Task<ActionResult<MediaItem>> PostMedia(MediaItem media)
         {
             _context.Media.Add(media);
             await _context.SaveChangesAsync();
@@ -88,7 +88,7 @@ namespace Dollop.Api.Controllers
 
         // DELETE: api/Media/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Media>> DeleteMedia(Guid id)
+        public async Task<ActionResult<MediaItem>> DeleteMedia(Guid id)
         {
             var media = await _context.Media.FindAsync(id);
             if (media == null)
